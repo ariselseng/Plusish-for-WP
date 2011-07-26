@@ -1,0 +1,19 @@
+
+#pbd-alp-load-posts a:link, #pbd-alp-load-posts a:visited {
+	display: block;
+	text-align: center;
+	padding: 4px 0;
+	color: #3366CC;
+	text-decoration: none;
+	background-color: #FAFAFA;
+	cursor: pointer;
+	display: block;
+	padding: 10px 0;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#pbd-alp-load-posts a:hover, #pbd-alp-load-posts a:active {
+		background: #f4f4f4;
+}
