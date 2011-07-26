@@ -37,7 +37,7 @@
 						
 					<?php } else { ?>
 						<div class="entry-content">
-					<?php the_excerpt(''.__('read more <span class="meta-nav">&raquo;</span>').''); ?>
+					<?php the_excerpt('More...'.__('read more <span class="meta-nav">&raquo;</span>').''); ?>
 					<?php wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: '), "</div>\n", 'number'); ?>
 						</div>
 						<div class="clear"></div>
