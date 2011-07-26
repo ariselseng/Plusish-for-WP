@@ -179,8 +179,8 @@ add_action('wp_footer', 'footer_link');
 function footer_link() {	
 	//$weburl = $_SERVER["SERVER_NAME"];
 	//$weburlcount = strlen($weburl);
-	$anchorthemeowner='design and code by <a href="http://www.cssreflex.com/" title="CSSReflex" target="blank">CSSReflex</a>, ';
-  	$textfooter = __('supported by <a href="http://slodive.com/" title="Slodive" target="blank">SloDive</a>' );
+	$anchorthemeowner='<a href="https://github.com/cowai/Plusish-for-WP---Norwegian" title="Plushish for WP on Github" target="blank">Source at Github</a>, ';
+  	//$textfooter = __('supported by <a href="http://slodive.com/" title="Slodive" target="blank">SloDive</a>' );
   	$content = '<div id="footerlink"><div class="center"><p>' .$anchorthemeowner. $textfooter.'</p></div><div class="clear"></div></div></div>';
   	echo $content;
 }
