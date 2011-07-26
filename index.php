@@ -25,14 +25,14 @@
 							</div><!-- End Thumb Container -->
 						
 						<div class="entry-content">
-							<?php the_excerpt(''.__('read more <span class="meta-nav">&raquo;</span>').''); ?>
+							<?php the_excerpt('More...'.__('read more <span class="meta-nav">&raquo;</span>').''); ?>
 							<?php wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: '), "</div>\n", 'number'); ?>
 						</div>
 						<div class="clear"></div>				
 						
 						<div class="entry-meta">
 							<?php edit_post_link(__('Edit'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
-							<span class="comments-link"><?php comments_popup_link(__('Comment (0)'), __('Comment (1)'), __('Comments (%)')) ?></span>
+							<span class="comments-link"><?php comments_popup_link(__('No comments yet.'), __('Comment (1)'), __('Comments (%)')) ?></span>
 						</div>
 						
 					<?php } else { ?>
@@ -42,9 +42,9 @@
 						</div>
 						<div class="clear"></div>
 						<div class="entry-meta">
-							 <a href="<?php the_permalink() ?>" title="Permalink to <?php the_title() ?>" rel="bookmark"><?php printf(__('Permalink')) ?></a> <span class="meta-sep">|</span> 
+							  
 							<?php edit_post_link(__('Edit'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
-							<span class="comments-link"><?php comments_popup_link(__('Comment (0)'), __('Comment (1)'), __('Comments (%)')) ?></span>
+							<span class="comments-link"><?php comments_popup_link(__('No comments yet.'), __('1 Comment'), __('% Comments')) ?></span>
 						</div>
 					<?php }?> 
 						
