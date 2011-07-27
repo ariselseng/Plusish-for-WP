@@ -40,7 +40,7 @@
            <form id="searchform" method="get" action="<?php echo home_url( '/' ); ?>">
 			<div class="searchform">
 				<p>
-				<input type="text" name="s" id="s"  value="Type your query and press enter to search..." onfocus="this.value='';" />
+				<input type="text" name="s" id="s"  value="<?php _e('Type your query and press enter to search...','plusish'); ?>" onfocus="this.value='';" />
 				
 				</p>
 			</div>
