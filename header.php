@@ -20,7 +20,7 @@
 		<div class="menu">
 			<ul>
 				<li class="<?php if ( is_front_page() ) echo ('current_page_item'); ?>">
-				<a href="<?php echo home_url( '/' ); ?>" title="home" class="top_parent">Home</a>
+				<a href="<?php echo home_url( '/' ); ?>" title="<?php _e('Home'); ?>" class="top_parent"><?php _e('Home'); ?></a>
 				</li>
 			</ul>
 		</div>
@@ -40,7 +40,7 @@
            <form id="searchform" method="get" action="<?php echo home_url( '/' ); ?>">
 			<div class="searchform">
 				<p>
-				<input type="text" name="s" id="s"  value="<?php _e(‘Type your query and press enter to search...’); ?>" onfocus="this.value='';" />
+				<input type="text" name="s" id="s"  value="Type your query and press enter to search..." onfocus="this.value='';" />
 				
 				</p>
 			</div>
