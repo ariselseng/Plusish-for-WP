@@ -43,4 +43,4 @@
 	</div><!-- #container -->
 
 <?php include (TEMPLATEPATH . '/sidebar_right.php'); ?>
-<?php get_footer() ?><?php get_header() ?>
+<?php get_footer() ?>
