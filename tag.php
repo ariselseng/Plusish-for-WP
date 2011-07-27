@@ -3,7 +3,7 @@
 	<div id="container">
 		<div id="content">
 			<h1 class="page-title search-title"><?php
-					printf( __( 'Tag Archives: %s' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					printf( __( 'Tag Archives: %s', 'plusish' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 			?></h1>
 			<div class="linebreak clear"></div>		
 
@@ -31,7 +31,7 @@
 						<div class="entry-meta">
 							<?php the_tags(__('<span class="tag-links">Tags '), ", ", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n") ?>
 							<?php edit_post_link(__('Edit'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
-							<span class="comments-link"><?php comments_popup_link(__('Comment (0)'), __('Comment (1)'), __('Comments (%)')) ?></span>
+							<span class="comments-link"><?php comments_popup_link(__('Comment (0)', 'plusish' ), __('Comment (1)', 'plusish' ), __('Comments (%)', 'plusish' )) ?></span>
 						</div>
 						
 					<?php } else { ?>
@@ -41,9 +41,9 @@
 						</div>
 						<div class="clear"></div>
 						<div class="entry-meta">
-							<?php the_tags(__('<span class="tag-links">Tags '), ", ", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n") ?>
+							<?php the_tags(__('<span class="tag-links">Tags ', 'plusish'), ", ", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n") ?>
 							<?php edit_post_link(__('Edit'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
-							<span class="comments-link"><?php comments_popup_link(__('Comment (0)'), __('Comment (1)'), __('Comments (%)')) ?></span>
+							<span class="comments-link"><?php comments_popup_link(__('Comment (0)', 'plusish' ), __('Comment (1)', 'plusish' ), __('Comments (%)', 'plusish' )) ?></span>
 						</div>
 					<?php }?> 
 						
