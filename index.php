@@ -14,7 +14,7 @@
 			
 			<!-- Begin post -->
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
-				<h2 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf(__('Link to %s'), esc_html(get_the_title(), 1)) ?>" rel="bookmark"><?php the_title() ?></a></h2>
+				<h2 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf(__('%s'), esc_html(get_the_title(), 1)) ?>" rel="bookmark"><?php the_title() ?></a></h2>
 				 <div class="entry-date"><?php unset($previousday); printf(__('%1$s &#8211; %2$s'), the_date('', '', '', false), get_the_time()) ?></div> 
 
 					<?php if ( has_post_thumbnail() ) { ?>
@@ -25,26 +25,27 @@
 							</div><!-- End Thumb Container -->
 						
 						<div class="entry-content">
-							<?php the_excerpt('More...'.__('read more <span class="meta-nav">&raquo;</span>').''); ?>
+							<?php the_excerpt(''.__('read more <span class="meta-nav">&raquo;</span>').''); ?>
 							<?php wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: '), "</div>\n", 'number'); ?>
 						</div>
 						<div class="clear"></div>				
 						
 						<div class="entry-meta">
 							<?php edit_post_link(__('Edit'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
-							<span class="comments-link"><?php comments_popup_link(__('No comments yet.'), __('Comment (1)'), __('Comments (%)')) ?></span>
+
+							<span class="comments-link"><?php comments_popup_link(__('Comment (0)'), __('Comment (1)'), __('Comments (%)')) ?></span>
 						</div>
 						
 					<?php } else { ?>
 						<div class="entry-content">
-					<?php the_excerpt('More...'.__('read more <span class="meta-nav">&raquo;</span>').''); ?>
+					<?php the_excerpt(''.__('read more <span class="meta-nav">&raquo;</span>').''); ?>
 					<?php wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: '), "</div>\n", 'number'); ?>
 						</div>
 						<div class="clear"></div>
 						<div class="entry-meta">
 							  
 							<?php edit_post_link(__('Edit'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
-							<span class="comments-link"><?php comments_popup_link(__('No comments yet.'), __('1 Comment'), __('% Comments')) ?></span>
+							<span class="comments-link"><?php comments_popup_link(__('Comment (0)', 'plusish' ), __('Comment (1)', 'plusish' ), __('Comments (%)', 'plusish' )) ?></span>
 						</div>
 					<?php }?> 
 						

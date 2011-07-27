@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
+<?php load_theme_textdomain('plusish'); ?>
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head() ?>
 
@@ -39,7 +40,7 @@
            <form id="searchform" method="get" action="<?php echo home_url( '/' ); ?>">
 			<div class="searchform">
 				<p>
-				<input type="text" name="s" id="s"  value="Type your query and press enter to search..." onfocus="this.value='';" />
+				<input type="text" name="s" id="s"  value="<?php _e(‘Type your query and press enter to search...’); ?>" onfocus="this.value='';" />
 				
 				</p>
 			</div>

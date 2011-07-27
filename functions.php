@@ -87,7 +87,7 @@ function reflex_tag_ur_it($glue) {
 if ( ! function_exists( 'reflex_posted_on' ) ) :
 // data before post
 function reflex_posted_on() {
-	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s.', 'reflex' ),
+	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s.', 'plusish' ),
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
 			get_permalink(),
@@ -155,7 +155,7 @@ function reflex_widgets_init() {
 // Changes default [...] in excerpt to a real link
 function reflex_excerpt_more($more) {
        global $post;
-       $readmore = __(' read more <span class="meta-nav">&raquo;</span>', 'reflex' );
+       $readmore = __(' read more <span class="meta-nav">&raquo;</span>', 'plusish' );
 	return ' <a href="'. get_permalink($post->ID) . '">' . $readmore . '</a>';
 }
 add_filter('excerpt_more', 'reflex_excerpt_more');
@@ -286,4 +286,5 @@ function reflex_register_my_menu() {
  	}
  }
  add_action('template_redirect', 'pbd_alp_init');
-?>
+ 
+ ?>
