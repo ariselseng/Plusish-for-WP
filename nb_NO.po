@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plusish\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-27 14:24+0100\n"
-"PO-Revision-Date: 2011-07-27 14:32+0100\n"
+"PO-Revision-Date: 2011-07-27 14:53+0100\n"
 "Last-Translator: Ari <post@ari.no>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -74,7 +74,7 @@ msgstr "les mer <span class=\"meta-nav\">&raquo;</span>"
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/search.php:26
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/search.php:39
 msgid "Pages: "
-msgstr ""
+msgstr "Sider: "
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/author.php:44
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/author.php:56
@@ -164,11 +164,11 @@ msgstr "Neste innlegg <span class=\"meta-nav\">&raquo;</span>"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/single.php:21
 msgid "Pages:"
-msgstr ""
+msgstr "Sider:"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/header.php:23
 msgid "Home"
-msgstr ""
+msgstr "Hjem"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/header.php:43
 msgid "Type your query and press enter to search..."
@@ -184,7 +184,7 @@ msgstr "Stikkordarkiv: %s"
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/search.php:12
 #, php-format
 msgid "Permalink to %s"
-msgstr ""
+msgstr "Permalenke til %s"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:90
 #, php-format
@@ -204,7 +204,7 @@ msgstr "Dette innlegget ble publisert i %1$s."
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:116
 #, php-format
 msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
+msgstr "Bokmerk <a href=\"%3$s\" title=\"Permalenke til %4$s\" rel=\"bookmark\">permalenke</a>."
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:158
 msgid " read more <span class=\"meta-nav\">&raquo;</span>"
@@ -217,12 +217,12 @@ msgstr ""
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:211
 msgid "Your comment is in moderation."
-msgstr ""
+msgstr "Din kommentar venter godkjenning."
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:215
 #, php-format
 msgid "%1$s - %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr ""
+msgstr "%1$s - %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalenke til denne kommentaren\">Permalenke</a>"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:232
 msgid "Pingback:"
@@ -243,15 +243,15 @@ msgstr ""
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/comments.php:17
 msgid "<span>One</span> comment"
-msgstr ""
+msgstr "<span>En</span> kommentar"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/comments.php:17
 msgid "<span>%</span> Comments"
-msgstr ""
+msgstr "<span>%</span> kommentarer"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/comments.php:40
 msgid "Comments are closed."
-msgstr ""
+msgstr "Kommentarer er stengt."
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/attachment.php:9
 msgid "Attachment : "
@@ -268,30 +268,30 @@ msgstr ""
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/search.php:5
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Søkeresultater for: %s"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/search.php:57
 msgid "Nothing Found"
-msgstr ""
+msgstr "Fant ingenting"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/search.php:59
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr ""
+msgstr "Ingenting dukket opp med din søketekst. Vennligst prøv igjen med noe annet som søkeord."
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/archive.php:9
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
-msgstr ""
+msgstr "Daglig arkiv <span>%s</span>"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/archive.php:11
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
-msgstr ""
+msgstr "Månedlig arkiv: <span>%s</span>"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/archive.php:13
 #, php-format
 msgid "Yearly Archives: <span>%s</span>"
-msgstr ""
+msgstr "Årlig arkiv: <span>%s</span>"
 
 #: /media/ari.no/domains/b.ari.no/public_html/wp-content/themes/Plusish-for-WP/archive.php:15
 msgid "Blog Archives"

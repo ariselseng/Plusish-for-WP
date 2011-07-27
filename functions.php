@@ -208,11 +208,11 @@ function plusish_comment($comment, $args, $depth) {
       </div>
         
       <?php if ($comment->comment_approved == '0') : ?>
-         <em><?php _e('Your comment is in moderation.') ?></em>
+         <em><?php _e('Your comment is in moderation.', 'plusish') ?></em>
          <br />
       <?php endif; ?>
 
-      <div class="comment-meta"><?php printf(__('%1$s - %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>'),
+      <div class="comment-meta"><?php printf(__('%1$s - %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'plusish'),
 										get_comment_date(),
 										get_comment_time(),
 										'#comment-' . get_comment_ID() );

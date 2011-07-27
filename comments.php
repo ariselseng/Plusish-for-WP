@@ -6,7 +6,7 @@
 <?php
 	if ( post_password_required() ) :
 ?>
-				<div class="nopassword"><?php _e( 'This post is protected. Enter the password to view any comments.' ) ?></div>
+				<div class="nopassword"><?php _e( 'This post is protected. Enter the password to view any comments.', 'plusish' ) ?></div>
 			</div><!-- .comments -->
 <?php
 		return;
@@ -14,7 +14,7 @@
 ?>
 <?php if ( have_comments() ) : ?>
 				<div id="comments-list" class="comments">
-					<h3><?php comments_number('', __('<span>One</span> comment'), __('<span>%</span> Comments') ); ?></h3>
+					<h3><?php comments_number('', __('<span>One</span> comment', 'plusish'), __('<span>%</span> Comments', 'plusish') ); ?></h3>
 					<div id="comments-nav-above" class="comments-navigation">
 <?php paginate_comments_links(); ?>
 					</div>
@@ -37,7 +37,7 @@
 			 */
 			if ( ! comments_open() && ! is_page() ) :
 			?>
-			<p class="nocomments"><?php _e( 'Comments are closed.', 'commune' ); ?></p>
+			<p class="nocomments"><?php _e( 'Comments are closed.', 'plusish', 'commune' ); ?></p>
 			<?php endif; // end ! comments_open() && ! is_page() ?>
 
 <?php endif // REFERENCE: if ( have_comments() ) ?>

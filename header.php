@@ -20,7 +20,7 @@
 		<div class="menu">
 			<ul>
 				<li class="<?php if ( is_front_page() ) echo ('current_page_item'); ?>">
-				<a href="<?php echo home_url( '/' ); ?>" title="<?php _e('Home'); ?>" class="top_parent"><?php _e('Home'); ?></a>
+				<a href="<?php echo home_url( '/' ); ?>" title="<?php _e('Home'); ?>" class="top_parent"><?php _e('Home', 'plusish'); ?></a>
 				</li>
 			</ul>
 		</div>
