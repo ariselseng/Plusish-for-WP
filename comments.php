@@ -19,7 +19,7 @@
 <?php paginate_comments_links(); ?>
 					</div>
 					
-<?php wp_list_comments('callback=reflex_comment'); ?> 
+<?php wp_list_comments('callback=plusish_comment'); ?> 
 					
 					<div id="comments-nav-below" class="comments-navigation">
 <?php paginate_comments_links(); ?>

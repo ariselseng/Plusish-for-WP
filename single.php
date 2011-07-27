@@ -26,8 +26,8 @@
 
 				<div class="entry-meta">
                 	<g:plusone size="small"></g:plusone>
-					<?php reflex_posted_on(); ?>
-					<?php //reflex_posted_in(); ?>	
+					<?php plusish_posted_on(); ?>
+					<?php //plusish_posted_in(); ?>	
 					<?php edit_post_link(__('Edit'), "\n\t\t\t\t\t<span class=\"edit-link\">", "</span>"); ?>
 				</div>
 				<div class="clear"></div> 

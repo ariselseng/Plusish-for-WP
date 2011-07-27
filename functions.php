@@ -13,16 +13,16 @@
  	add_theme_support('automatic-feed-links'); 
  		
 // Generates semantic classes for BODY and POST element
-function reflex_category_id_class($classes) {
+function plusish_category_id_class($classes) {
 	global $post;
 	if (!is_404() && isset($post))
 	foreach((get_the_category($post->ID)) as $category)
 		$classes[] = $category->category_nicename;
 	return $classes;
 }
-add_filter('body_class', 'reflex_category_id_class');
+add_filter('body_class', 'plusish_category_id_class');
 
-function reflex_tag_id_class($classes) {
+function plusish_tag_id_class($classes) {
 	global $post;
 	if (!is_404() && isset($post))
 	if ( $tags = get_the_tags() )
@@ -30,19 +30,19 @@ function reflex_tag_id_class($classes) {
 			$classes[] = 'tag-' . $tag->slug;
 	return $classes;
 }
-add_filter('body_class', 'reflex_tag_id_class');
+add_filter('body_class', 'plusish_tag_id_class');
 
-function reflex_author_id_class($classes) {
+function plusish_author_id_class($classes) {
 	global $post;
 	if (!is_404() && isset($post))
 		$classes[] = 'author-' . sanitize_title_with_dashes(strtolower(get_the_author_meta('login')));
 	return $classes;
 }
-add_filter('post_class', 'reflex_author_id_class');
+add_filter('post_class', 'plusish_author_id_class');
 
 
 // Generates time- and date-based classes for BODY, post DIVs, and comment LIs; relative to GMT (UTC)
-function reflex_date_classes( $t, &$c, $p = '' ) {
+function plusish_date_classes( $t, &$c, $p = '' ) {
 	$t = $t + ( get_option('gmt_offset') * 3600 );
 	$c[] = $p . 'y' . gmdate( 'Y', $t ); // Year
 	$c[] = $p . 'm' . gmdate( 'm', $t ); // Month
@@ -51,7 +51,7 @@ function reflex_date_classes( $t, &$c, $p = '' ) {
 }
 
 // For category lists on category archives: Returns other categories except the current one (redundant)
-function reflex_cats_meow($glue) {
+function plusish_cats_meow($glue) {
 	$current_cat = single_cat_title( '', false );
 	$separator = "\n";
 	$cats = explode( $separator, get_the_category_list($separator) );
@@ -68,7 +68,7 @@ function reflex_cats_meow($glue) {
 }
 
 // For tag lists on tag archives: Returns other tags except the current one (redundant)
-function reflex_tag_ur_it($glue) {
+function plusish_tag_ur_it($glue) {
 	$current_tag = single_tag_title( '', '',  false );
 	$separator = "\n";
 	$tags = explode( $separator, get_the_tag_list( "", "$separator", "" ) );
@@ -84,9 +84,9 @@ function reflex_tag_ur_it($glue) {
 	return trim(join( $glue, $tags ));
 }
 
-if ( ! function_exists( 'reflex_posted_on' ) ) :
+if ( ! function_exists( 'plusish_posted_on' ) ) :
 // data before post
-function reflex_posted_on() {
+function plusish_posted_on() {
 	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s.', 'plusish' ),
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
@@ -96,16 +96,16 @@ function reflex_posted_on() {
 		),
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			get_author_posts_url( get_the_author_meta( 'ID' ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'reflex' ), get_the_author() ),
+			sprintf( esc_attr__( 'View all posts by %s', 'plusish' ), get_the_author() ),
 			get_the_author()
 		)
 	);
 }
 endif;
 
-if ( ! function_exists( 'reflex_posted_in' ) ) :
+if ( ! function_exists( 'plusish_posted_in' ) ) :
 // data after post
-function reflex_posted_in() {
+function plusish_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {
@@ -128,7 +128,7 @@ endif;
 
 
 // Widgets plugin: intializes the plugin after the widgets above have passed snuff
-function reflex_widgets_init() {
+function plusish_widgets_init() {
 
 		if ( function_exists('register_sidebar') )
 		register_sidebar(array(
@@ -153,16 +153,16 @@ function reflex_widgets_init() {
 	}
 
 // Changes default [...] in excerpt to a real link
-function reflex_excerpt_more($more) {
+function plusish_excerpt_more($more) {
        global $post;
        $readmore = __(' read more <span class="meta-nav">&raquo;</span>', 'plusish' );
 	return ' <a href="'. get_permalink($post->ID) . '">' . $readmore . '</a>';
 }
-add_filter('excerpt_more', 'reflex_excerpt_more');
+add_filter('excerpt_more', 'plusish_excerpt_more');
 
 
 // Runs our code at the end to check that everything needed has loaded
-add_action( 'init', 'reflex_widgets_init' );
+add_action( 'init', 'plusish_widgets_init' );
 
 
 // Adds filters for the description/meta content in archives.php
@@ -171,7 +171,7 @@ add_filter( 'archive_meta', 'convert_smilies' );
 add_filter( 'archive_meta', 'convert_chars' );
 add_filter( 'archive_meta', 'wpautop' );
 
-// Remember: the reflex is for play.
+// Remember: the plusish is for play.
 
 // footer link 
 add_action('wp_footer', 'footer_link');
@@ -179,14 +179,14 @@ add_action('wp_footer', 'footer_link');
 function footer_link() {	
 	//$weburl = $_SERVER["SERVER_NAME"];
 	//$weburlcount = strlen($weburl);
-	$anchorthemeowner='<a href="https://github.com/cowai/Plusish-for-WP---Norwegian" title="Plushish for WP on Github" target="blank">Source at Github</a>, ';
+	$anchorthemeowner='<a href="https://github.com/cowai/Plusish-for-WP" title="Plushish for WP on Github" target="blank">Source at Github</a>, ';
   	//$textfooter = __('supported by <a href="http://slodive.com/" title="Slodive" target="blank">SloDive</a>' );
   	$content = '<div id="footerlink"><div class="center"><p>' .$anchorthemeowner. $textfooter.'</p></div><div class="clear"></div></div></div>';
   	echo $content;
 }
 
 //Remove <p> in excerpt
-function reflex_strip_para_tags ($content) {
+function plusish_strip_para_tags ($content) {
 if ( is_home() && ($paged < 2 )) {
   $content = str_replace( '<p>', '', $content );
   $content = str_replace( '</p>', '', $content );
@@ -194,9 +194,9 @@ if ( is_home() && ($paged < 2 )) {
 }
 } 
 
-if ( ! function_exists( 'reflex_comment' ) ) :
+if ( ! function_exists( 'plusish_comment' ) ) :
 //Comment function
-function reflex_comment($comment, $args, $depth) {
+function plusish_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case '' :
@@ -237,9 +237,9 @@ function reflex_comment($comment, $args, $depth) {
 endif;
        
 //custom menu support
-add_action( 'init', 'reflex_register_my_menu' );
+add_action( 'init', 'plusish_register_my_menu' );
 
-function reflex_register_my_menu() {
+function plusish_register_my_menu() {
 	register_nav_menu( 'primary-menu', __( 'Primary Menu' ) );
 }        
 

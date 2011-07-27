@@ -30,8 +30,8 @@
 <div class="clear"></div>
 
 				<div class="entry-meta">
-					<?php reflex_posted_on(); ?>
-					<?php reflex_posted_in(); ?>	
+					<?php plusish_posted_on(); ?>
+					<?php plusish_posted_in(); ?>	
 					<?php edit_post_link(__('Edit'), "\n\t\t\t\t\t<span class=\"edit-link\">", "</span>"); ?>
 				</div>
 			</div><!-- .post -->
