@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
-<?php load_theme_textdomain('plusish'); ?>
+
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head() ?>
 
@@ -18,12 +18,11 @@
 <div id="topbar">
 	<div id="access">	
 		<div class="menu">
-			<?php /*<ul>
-				Uncomment this if you want a home entry on the menu. I use a static site as homepage and don't want a home entry
+			
 				<li class="<?php  if ( is_front_page() ) echo ('current_page_item'); ?>">
-				<a href="<?php echo home_url( '/' ); ?>" title="<?php _e('Home'); ?>" class="top_parent"><?php _e('Home', 'plusish'); ?></a>
-				</li>
-			</ul> */ ?>
+				<?php /*<a href="<?php echo home_url( '/' ); ?>" title="<?php _e('Home'); ?>" class="top_parent"><?php _e('Home', 'plusish'); ?></a>
+				*/ ?></li>
+			</ul> 
 		</div>
 		<?php wp_nav_menu(array( 'container_class' => 'menu-header', 'theme_location' => 'primary-menu',)); ?>			
 	</div><!--  #access -->	

@@ -1,4 +1,5 @@
 <?php
+load_theme_textdomain('plusish');
 // Post thumbnails support for post
 	if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 	add_theme_support( 'post-thumbnails', array( 'post' ) ); // Add it for posts
@@ -284,7 +285,8 @@ function plusish_register_my_menu() {
  			'pbd_alp',
  			
  			array(
-  				'moreZ' => __('More', 'plusish' ),
+ 				
+  				'moreZ' => __( 'More', 'plusish' ),
        				'nomoreZ' => __('No more pages to load', 'plusish' ),
        				'loadingZ' => __('Loading...', 'plusish' ),
  				'startPage' => $paged,
