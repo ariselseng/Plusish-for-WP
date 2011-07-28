@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 		// Insert the "More Posts" link.
 		$('#content')
 			.append('<div class="pbd-alp-placeholder-'+ pageNum +'"></div>')
-			.append('<div id="pbd-alp-load-posts"><a href="#">More</a></div>');
+			.append('<div id="pbd-alp-load-posts"><a href="#">'+ pbd_alp.moreZ +'</a></div>');
 			
 		// Remove the traditional navigation.
 		$('.navigation').remove();
@@ -33,7 +33,8 @@ jQuery(document).ready(function($) {
 		if(pageNum <= max) {
 		
 			// Show that we're working.
-			$(this).text('Loading...');
+			$(this).text(pbd_alp.loadingZ);
+			
 			
 			$('.pbd-alp-placeholder-'+ pageNum).load(nextLink + ' .post',
 				function() {
@@ -47,9 +48,9 @@ jQuery(document).ready(function($) {
 					
 					// Update the button message.
 					if(pageNum <= max) {
-						$('#pbd-alp-load-posts a').text('More');
+						$('#pbd-alp-load-posts a').text(pbd_alp.moreZ);
 					} else {
-						$('#pbd-alp-load-posts a').text('No more posts to load.');
+						$('#pbd-alp-load-posts a').text(pbd_alp.nomoreZ);
 					}
 				}
 			);

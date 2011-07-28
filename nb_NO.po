@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plusish\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-27 23:37+0100\n"
-"PO-Revision-Date: 2011-07-27 23:43+0100\n"
+"POT-Creation-Date: 2011-07-28 22:46+0100\n"
+"PO-Revision-Date: 2011-07-28 22:46+0100\n"
 "Last-Translator: Ari <post@ari.no>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -227,6 +227,18 @@ msgstr ""
 #: /media/ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:243
 msgid "Primary Menu"
 msgstr ""
+
+#: /media/ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:281
+msgid "More"
+msgstr "Mer"
+
+#: /media/ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:282
+msgid "No more pages to load"
+msgstr "Ingen flere innlegg å vise"
+
+#: /media/ari.no/public_html/wp-content/themes/Plusish-for-WP/functions.php:283
+msgid "Loading..."
+msgstr "Laster..."
 
 #: /media/ari.no/public_html/wp-content/themes/Plusish-for-WP/category.php:6
 #, php-format

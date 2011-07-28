@@ -241,13 +241,16 @@ add_action( 'init', 'plusish_register_my_menu' );
 
 function plusish_register_my_menu() {
 	register_nav_menu( 'primary-menu', __( 'Primary Menu' ) );
-}        
+}  
+      
 
+		
+ 		
 
 //LoadMore
  function pbd_alp_init() {
  	global $wp_query;
- 
+	
  	// Add code to index pages.
  	if( !is_singular() ) {	
  		// Queue JS and CSS
@@ -257,8 +260,9 @@ function plusish_register_my_menu() {
  			array('jquery'),
  			'1.0',
  			true
- 		);
- 		
+		);
+  		
+
  		wp_enqueue_style(
  			'pbd-alp-style',
  			get_template_directory_uri() . '/css/style.css',
@@ -267,23 +271,33 @@ function plusish_register_my_menu() {
  			'all'
  		);
  		
- 	
- 		
+ 	 	
  		// What page are we on? And what is the pages limit?
  		$max = $wp_query->max_num_pages;
  		$paged = ( get_query_var('paged') > 1 ) ? get_query_var('paged') : 1;
  		
+ 		
  		// Add some parameters for the JS.
+		$more = __('More', 'plusish' );
+		$nomore = __('No more pages to load', 'plusish' );
+		$loading = __('Loading...', 'plusish' );
+ 		
  		wp_localize_script(
  			'pbd-alp-load-posts',
  			'pbd_alp',
+ 			
  			array(
+ 				'moreZ' => $more,
+ 				'nomoreZ' => $nomore,
+ 				'loadingZ' => $loading,
  				'startPage' => $paged,
  				'maxPages' => $max,
  				'nextLink' => next_posts($max, false)
  			)
+
  		);
- 	}
+ 		
+ 		 	}
  }
  add_action('template_redirect', 'pbd_alp_init');
  
