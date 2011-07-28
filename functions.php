@@ -244,7 +244,7 @@ function plusish_register_my_menu() {
 }  
       
 
-		
+
  		
 
 //LoadMore
@@ -278,18 +278,15 @@ function plusish_register_my_menu() {
  		
  		
  		// Add some parameters for the JS.
-		$more = __('More', 'plusish' );
-		$nomore = __('No more pages to load', 'plusish' );
-		$loading = __('Loading...', 'plusish' );
  		
  		wp_localize_script(
  			'pbd-alp-load-posts',
  			'pbd_alp',
  			
  			array(
- 				'moreZ' => $more,
- 				'nomoreZ' => $nomore,
- 				'loadingZ' => $loading,
+  				'moreZ' => __('More', 'plusish' ),
+       				'nomoreZ' => __('No more pages to load', 'plusish' ),
+       				'loadingZ' => __('Loading...', 'plusish' ),
  				'startPage' => $paged,
  				'maxPages' => $max,
  				'nextLink' => next_posts($max, false)

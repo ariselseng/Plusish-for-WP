@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-
+	//alert(pbd_alp.moreZ);
 	// The number of the next page to load (/page/x/).
 	var pageNum = parseInt(pbd_alp.startPage) + 1;
 	
