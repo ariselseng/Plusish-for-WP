@@ -253,7 +253,7 @@ function plusish_register_my_menu() {
  	global $wp_query;
 	
  	// Add code to index pages.
- 	if( !is_singular() ) {	
+ 	if( !is_singular() && !is_404() ) {	
  		// Queue JS and CSS
  		wp_enqueue_script(
  			'pbd-alp-load-posts',
