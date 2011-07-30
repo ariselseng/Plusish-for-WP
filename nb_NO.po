@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plusish\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-28 23:22+0100\n"
-"PO-Revision-Date: 2011-07-28 23:22+0100\n"
+"PO-Revision-Date: 2011-07-29 01:24+0100\n"
 "Last-Translator: Ari <post@ari.no>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -275,11 +275,11 @@ msgstr ""
 
 #: /media/ari.no/public_html/wp-content/themes/Plusish-for-WP/404.php:10
 msgid " That’s an error."
-msgstr " Dette er en feil."
+msgstr " Hmm."
 
 #: /media/ari.no/public_html/wp-content/themes/Plusish-for-WP/404.php:11
 msgid " The requested URL /404 was not found on this server. That’s all we know."
-msgstr " Den forespurte URL-en ble ikke funnet på denne serveren. Det er alt vi vet."
+msgstr " Den forespurte adressen er ikke å finne på serveren.  Noe mer vet jeg ikke."
 
 #: /media/ari.no/public_html/wp-content/themes/Plusish-for-WP/search.php:5
 #, php-format
