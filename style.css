@@ -21,7 +21,7 @@ a { color: #444; text-decoration: none; outline: none }
 	a:hover { color: #3366CC; text-decoration: none; outline: 0 }
 h1, h2, h3, h4 { font-family: Helvetica,Verdana,Arial,Sans-Serif; }
 h1 { font-family: Helvetica,Verdana,Arial,Sans-Serif; font-size: 2.5em; }
-	h1.blogtitle a{background:#DD4B39; padding:3px 8px;font-weight:normal; border-radius:3px; display: block; color: #fff; float: left; margin-right:40px }
+	h1.blogtitle a{background:#DD4B39; padding:3px 8px;font-weight:normal; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display: block; color: #fff; float: left; margin-right:40px }
 h2 a,h3 a, h4 a { color:#000000; font-weight: normal }
 h2.entry-title { color: #444; font-weight: bold; ; margin: 0 0 0 0; font-size: 28px; }
 h2.single-entry-title { color: #444; font-weight: bold; ; margin: 0 0 0.5em 0; font-size: 28px; }
@@ -84,8 +84,8 @@ div#secondary { clear: right }
 .entry-content ul { margin: 0 0 0.5em 2em; padding: 0em 1em 1em 0em; }
 	.entry-content ul li { margin: 0 0 0.2em }
 .entry-content pre { margin: 0 0 .5em 2em; padding: 0em 1em 1em 0em; }
-.entry-content a { color: #444; }
-	.entry-content a:visited { color: #3366CC; }
+.entry-content a { color: #DD4B39; }
+	.entry-content a:visited { color: #852c20; }
 	.entry-content a:hover { color: #0299FF; }
 .entry-content h2 { font-size: 1.8em !important }
 .entry-content h3 { font-size: 1.5em !important }
