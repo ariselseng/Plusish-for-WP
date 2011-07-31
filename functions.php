@@ -299,5 +299,9 @@ function plusish_register_my_menu() {
  		 	}
  }
  add_action('template_redirect', 'pbd_alp_init');
- 
+ //Remove generator name and version from your Website pages and from the RSS feed.
+function completely_remove_wp_version() {
+	return ''; //returns nothing, exactly the point.
+}
+add_filter('the_generator', 'completely_remove_wp_version');
  ?>
